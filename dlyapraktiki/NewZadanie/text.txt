@@ -1,0 +1,10 @@
+Gubkin 11 3 4 4 2 5
+Novikov 12 3 4 4 2 5
+Radkevich 11 5 5 4 5 5
+Yarovoi 10 3 4 3 4 5
+Romancev 13 4 4 4 3 5
+Petrova 11 5 5 4 5 3
+Malahov 16 4 5 2 4 3
+Pushkin 14 4 5 3 3 5 
+Andreev 9 3 4 5 2 4
+Rukin 7 5 5 4 3 4
