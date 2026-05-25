@@ -1,4 +1,4 @@
-﻿#include <iostream>
+#include <iostream>
 #include <fstream>
 #include <cstdlib>
 
@@ -20,46 +20,44 @@ int main()
     }
 
     MyList<Student> list;
+    MyList<Student> sortedList;
+
     Student s;
 
     while (in >> s)
     {
         list.addEnd(s);
+        sortedList.addOrdered(s); 
     }
 
     cout << "Original list:\n\n";
     cout << list;
 
-    // проверка пустоты
+    cout << "\nSorted list:\n\n";
+    cout << sortedList;
+
+
     cout << "\nIs list empty? ";
     cout << (list.isEmpty() ? "Yes" : "No") << "\n";
 
-    // поиск
-    Student target = s;
+    Student demo = s;
 
-    // попробуем найти любой элемент
-    cout << "\nFind test:\n";
-    if (list.find(target))
-        cout << "Element found\n";
+    cout << "\nFind demo element:\n";
+    if (list.find(demo))
+        cout << "Found\n";
     else
-        cout << "Element not found\n";
+        cout << "Not found\n";
 
-    // удаление 
-    cout << "\nAfter delete attempt:\n";
-    list.deleteNode(target);
+    cout << "\nAfter delete demo element:\n";
+    list.deleteNode(demo);
     cout << list;
 
-    // добавление в начало
-    Student newStudent("TEST", 99, new int[5] {2, 2, 2, 2, 2});
+    Student newStudent("TEST", 99, new int[5]{2,2,2,2,2});
+
     list.addBegin(newStudent);
-
-    cout << "\nAfter addBegin:\n";
-    cout << list;
-
-    // добавление в конец
     list.addEnd(newStudent);
 
-    cout << "\nAfter addEnd:\n";
+    cout << "\nAfter addBegin + addEnd:\n";
     cout << list;
 
     return 0;
